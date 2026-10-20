@@ -1,0 +1,5 @@
+{
+ "mng_algorithm.py|konstante|0 -> 1|fd30e12a#0": "equivalent",
+ "mng_algorithm.py|konstante|1 -> 2|f28160b0#0": "equivalent",
+ "mng_algorithm.py|schleife|range(n) -> range(n - 1)|1c83cda6#3": "equivalent"
+}
