@@ -1,7 +1,6 @@
 # Menger: disjunkte Wege und Zusammenhang – Streamlit-Demo
 
-<!-- TODO nach dem Deploy: direkt hierher den Live-Link setzen (Leerzeile davor und danach):
-**[→ Demo live ausprobieren](https://sebastianhanisch-menger-demo.streamlit.app/)** -->
+**[→ Demo live ausprobieren](https://sebastianhanisch-menger-demo.streamlit.app/)**
 
 Erstes Stück der Reihe **Schnitte und Zusammenhang** (Arbeitstitel der Linie `schnitte-zusammenhang`) in der „Konzepte“-Reihe für die Website „Sebastian Hanisch – Operations Research und Machine Learning“, Bereich Graphentheorie. Vehikel: ein **Verbindungsnetz zwischen Standorten** (Depots, Umschlagpunkte, Werke), synthetisch und mit festem Zufalls-Seed. Die Demo fragt: **Wie viele voneinander unabhängige Verbindungen hat das Netz zwischen zwei Standorten, wie viele insgesamt, und wo ist die Engstelle?** Der Satz von Menger macht daraus eine Flussrechnung: Die Zahl disjunkter Wege ist gleich der kleinsten Zahl von Standorten (bzw. Leitungen), deren Ausfall die beiden trennt.
 
