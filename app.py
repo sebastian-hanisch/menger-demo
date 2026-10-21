@@ -81,10 +81,10 @@ with st.container(key="kopf"):
 st.markdown(
     """
 **Wie viele voneinander unabhängige Verbindungen hat ein Netz zwischen zwei Standorten, und wo ist die Engstelle?** Der **Satz von Menger** sagt: So viele **disjunkte Wege** es gibt (ohne gemeinsamen Zwischenstandort
-oder ohne gemeinsame Leitung), so viele Standorte oder Leitungen muss man mindestens ausfallen lassen, um die beiden zu trennen. Beides rechnet ein **Fluss** mit Einheitskapazitäten aus; die Demo zeigt die Wege, die trennende
+oder ohne gemeinsame Leitung), so viele Standorte oder Leitungen muss man mindestens ausfallen lassen, um die beiden zu trennen (Standorte nur bei nicht benachbarten Standorten). Beides rechnet ein **Fluss** mit Einheitskapazitäten aus; die Demo zeigt die Wege, die trennende
 Menge und den Zusammenhang des **ganzen Netzes** (der Algorithmus von **Even** spart gegenüber allen Paaren einzeln viele Flüsse).
 
-Der **Mindestgrad** (die wenigsten Leitungen an einem Standort) ist eine obere Schranke: Es gilt immer **κ ≤ λ ≤ Mindestgrad**. Auf den Modellnetzen sagt er fast alles; interessant ist, wo er nicht reicht, nämlich an der **Engstelle**.
+Der **Mindestgrad** (die wenigsten Leitungen an einem Standort) ist eine obere Schranke: Es gilt immer **κ ≤ λ ≤ Mindestgrad**. Auf den dünnen Modellnetzen sagt er fast alles; interessant ist, wo er nicht reicht, nämlich an der **Engstelle**.
 
 Das ist das erste Stück der Reihe **Schnitte und Zusammenhang**. Wer mehr zu Max-Flow = Min-Cut sucht, findet es in **edmonds-karp-demo** und **dinic-demo**; alle Paare auf einmal zeigt **gomory-hu-demo**; die Brücken und Artikulationspunkte (Zusammenhang 1) **bridges-demo**.
 Weiter unten: die Experimente **🔬**, **🚧 Wo die Annahmen enden** und der Expander **📐 Mathematische Formulierung**.
@@ -95,7 +95,7 @@ with st.expander("So rechnet man den Zusammenhang eines Netzes", expanded=True):
     st.markdown(
         """
 1. **Disjunkte Wege:** Zwei Wege zwischen A und B sind **knotendisjunkt**, wenn sie außer A und B keinen Standort teilen, und **kantendisjunkt**, wenn sie keine Leitung teilen.
-2. **Satz von Menger:** Die größte Zahl disjunkter Wege ist gleich der kleinsten Zahl von Standorten (bzw. Leitungen), deren Ausfall A und B trennt. Die trennende Menge ist die **Engstelle** zwischen den beiden.
+2. **Satz von Menger:** Bei nicht benachbarten Standorten ist die größte Zahl knotendisjunkter Wege gleich der kleinsten Zahl von Standorten, deren Ausfall A und B trennt; für Leitungen gilt es entsprechend auch bei benachbarten Standorten. Die trennende Menge ist die **Engstelle** zwischen den beiden.
 3. **Fluss rechnen:** Jede Leitung bekommt Kapazität 1 (kantendisjunkt) bzw. jeder Standort wird in einen Eingang und einen Ausgang gespalten, verbunden durch eine Leitung mit Kapazität 1 (knotendisjunkt, **Knotenspaltung**). Wege, die der Fluss findet, sind die disjunkten Wege.
 4. **Ganzes Netz:** κ ist das Minimum von κ(A, B) über alle nicht benachbarten Paare. **Even** prüft nur die ersten κ + 1 Standorte als Start gegen alle späteren, weil eine trennende Menge mit höchstens κ Standorten nicht alle enthalten kann. λ braucht n − 1 Flüsse von einem festen Standort.
 5. **Warum der Mindestgrad nicht reicht:** κ ≤ λ ≤ Mindestgrad (Whitney), aber ein Netz mit hohem Mindestgrad kann an einer Engstelle hängen (zwei dichte Regionen, nur über wenige Leitungen verbunden).

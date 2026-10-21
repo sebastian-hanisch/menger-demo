@@ -63,7 +63,7 @@ PRESET_HELP = {
     "Lehrbeispiel (zwei Werke)": "Zwei Werke mit je vier Standorten, nur über den Standort A verbunden: Fällt A aus, sind die Werke getrennt; zwei Leitungen müssten fallen (von Hand zu prüfen).",
     "Der Mindestgrad sagt fast alles": "40 Standorte, mittlerer Grad 5: Der am schwächsten angebundene Standort entscheidet allein, Engstellen im Netz gibt es kaum.",
     "Die Engstelle im Verbundnetz": "Drei dichte Regionen mit nur einer Leitung zwischen je zwei Regionen: Der Zusammenhang hängt an dieser Engstelle, der Mindestgrad ist viel größer.",
-    "Standorte vor Leitungen: κ < λ": "Mit zwei Leitungen zwischen je zwei Regionen laufen manche Leitungen über denselben Standort: Der Knotenzusammenhang liegt unter dem Kantenzusammenhang, und der unter dem Mindestgrad.",
+    "Standorte vor Leitungen: κ < λ": "Mit zwei Leitungen zwischen je zwei Regionen laufen manche Leitungen über denselben Standort: Der Knotenzusammenhang liegt unter dem Kantenzusammenhang (in 10 von 10 Netzen, Experiment 5) und dieser in 4 von 10 Netzen unter dem Mindestgrad; in diesem Preset trifft beides zu.",
     "Ring: viele kleine Engstellen": "Der Ring mit Abkürzungen hat viele Standortpaare, die nur über wenige Zwischenstandorte verbunden sind.",
     "Even spart Flüsse": "80 Standorte: Alle Paare einzeln zu prüfen kostet ein Vielfaches der Flüsse, die der Algorithmus von Even braucht.",
 }

@@ -94,7 +94,7 @@ def test_verdict_texts_quote_the_readme_numbers():
     assert "Im Ring mit Abkürzungen sind es 28 %" in ev.verdict_bottleneck(p)[1]
     assert "das 3,1-, 6,6- und 13,8-Fache" in ev.verdict_even(e)[1] and "das 9,5- bis 20-Fache" in ev.verdict_even(e)[1]
     assert "bei 1 / 2 / 3 / 5 Leitungen liegt der Knotenzusammenhang κ im Mittel bei 1,8 / 2,8 / 3,9 / 4,8" in ev.verdict_links(link)[1]
-    assert "Ab 5 Leitungen gilt κ = λ = Mindestgrad in allen Netzen." in ev.verdict_links(link)[1]
+    assert "Ab 5 Leitungen gilt κ = λ = Mindestgrad in allen 10 gemessenen Netzen." in ev.verdict_links(link)[1]
 
 
 def test_the_experiment_grid_is_the_documented_one():

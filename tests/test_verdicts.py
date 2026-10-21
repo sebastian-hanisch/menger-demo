@@ -116,7 +116,7 @@ def test_links_names_the_means_for_one_two_three_and_five_links_and_the_first_eq
     kind, text = ev.verdict_links(rows)
     assert kind == "info"
     assert ("Im Verbundnetz mit mittlerem Grad 8 steigt der Zusammenhang mit der Zahl der Leitungen zwischen je zwei Regionen: bei 1 / 2 / 3 / 5 Leitungen liegt der Knotenzusammenhang κ im Mittel "
-            "bei 1,8 / 2,8 / 3,9 / 4,8, der Kantenzusammenhang λ bei 2 / 4 / 4,5 / 4,8 und der Mindestgrad bei 4,4 / 4,4 / 4,5 / 4,8 (je 10 Netze). Ab 5 Leitungen gilt κ = λ = Mindestgrad in allen Netzen.") == text
+            "bei 1,8 / 2,8 / 3,9 / 4,8, der Kantenzusammenhang λ bei 2 / 4 / 4,5 / 4,8 und der Mindestgrad bei 4,4 / 4,4 / 4,5 / 4,8 (je 10 Netze). Ab 5 Leitungen gilt κ = λ = Mindestgrad in allen 10 gemessenen Netzen.") == text
 
 
 def test_links_warns_when_kappa_falls_and_omits_the_equal_sentence_without_such_a_case():

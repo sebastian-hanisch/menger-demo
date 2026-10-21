@@ -249,6 +249,6 @@ def verdict_links(rows):
     text = (f"Im Verbundnetz mit mittlerem Grad 8 steigt der Zusammenhang mit der Zahl der Leitungen zwischen je zwei Regionen: bei {names} Leitungen liegt der Knotenzusammenhang κ im Mittel bei {seq('sum_k')}, "
             f"der Kantenzusammenhang λ bei {seq('sum_l')} und der Mindestgrad bei {seq('sum_d')} (je {_i(rows[0]['nets'])} Netze).")
     if first is not None:
-        text += f" Ab {_i(first)} Leitungen gilt κ = λ = Mindestgrad in allen Netzen."
+        text += f" Ab {_i(first)} Leitungen gilt κ = λ = Mindestgrad in allen {_i(rows[0]['nets'])} gemessenen Netzen."
     ks = [r["sum_k"] / r["nets"] for r in rows]
     return ("warning" if any(b < a for a, b in zip(ks, ks[1:])) else "info"), text
